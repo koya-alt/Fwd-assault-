@@ -2,7 +2,7 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libdobby
-LOCAL_SRC_FILES := core/cheat/hooks/dobby/$(TARGET_ARCH_ABI)/libdobby.a
+LOCAL_SRC_FILES := core/cheat/hooks/dobby/arm64-v8a/libdobby.a
 LOCAL_EXPORT_C_INCLUDES := core/cheat/hooks/dobby/
 
 include $(PREBUILT_STATIC_LIBRARY)
