@@ -1,0 +1,28 @@
+name: Build SO
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install NDK
+      run: |
+        sudo apt update
+        sudo apt install -y android-sdk
+
+    - name: Build
+      run: |
+        cd jni
+        ndk-build
+
+    - name: Upload SO
+      uses: actions/upload-artifact@v3
+      with:
+        name: so
+        path: jni/libs/**/*
