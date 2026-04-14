@@ -1,3 +1,7 @@
+#include <string>
+#include <vector>
+#include <codecvt>
+#include <locale>
 #pragma once
 
 #include <dlfcn.h>
