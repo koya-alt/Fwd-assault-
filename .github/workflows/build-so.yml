@@ -11,11 +11,14 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
+    - name: Setup NDK
+      uses: nttld/setup-ndk@v1
+      with:
+        ndk-version: r25c
+
     - name: Build
       run: |
-        wget https://dl.google.com/android/repository/android-ndk-r25c-linux.zip
-        unzip android-ndk-r25c-linux.zip
-        ./android-ndk-r25c/ndk-build NDK_PROJECT_PATH=. APP_BUILD_SCRIPT=Android.mk
+        ndk-build NDK_PROJECT_PATH=. APP_BUILD_SCRIPT=Android.mk
 
     - name: Upload SO
       uses: actions/upload-artifact@v4
