@@ -23,7 +23,7 @@ LOCAL_SRC_FILES := main.cpp \
 
 LOCAL_CFLAGS := -O2 -ffast-math -ffunction-sections -fdata-sections
 LOCAL_CFLAGS += -fvisibility=hidden -fvisibility-inlines-hidden
-LOCAL_CPPFLAGS := -std=c++23 -O2
+LOCAL_CPPFLAGS := -std=c++17 -O2
 LOCAL_LDLIBS := -llog -landroid -lEGL -lGLESv3
 LOCAL_STATIC_LIBRARIES := libdobby
 
