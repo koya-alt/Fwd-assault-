@@ -25,7 +25,9 @@ LOCAL_CFLAGS += -fvisibility=hidden -fvisibility-inlines-hidden
 
 LOCAL_CPPFLAGS := -std=c++17 -O2 -frtti -fexceptions
 
+# ✅ YOUR FIX (correct)
 LOCAL_LDLIBS := -llog -landroid -lEGL -lGLESv3
+LOCAL_LDLIBS += -lc++_static -lc++abi -lm
 
 LOCAL_STATIC_LIBRARIES := libdobby
 
